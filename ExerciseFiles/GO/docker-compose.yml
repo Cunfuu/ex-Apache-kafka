@@ -18,13 +18,13 @@ services:
   producer:
     build:
       context: .
-      dockerfile: Dockerfile.producer
+      dockerfile: producer.Dockerfile
     depends_on:
       - kafka
 
   consumer:
     build:
       context: .
-      dockerfile: Dockerfile.consumer
+      dockerfile: consumer.Dockerfile
     depends_on:
       - kafka
