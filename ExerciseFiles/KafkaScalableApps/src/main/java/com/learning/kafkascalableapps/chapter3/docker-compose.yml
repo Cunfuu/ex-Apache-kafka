@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  kafka-simple-consumer:
+    build:
+      context: .
+      dockerfile: Consumer.Dockerfile
+    #command: java -cp . KafkaSimpleConsumer
+
+  kafka-simple-producer:
+    build:
+      context: .
+      dockerfile: Producer.Dockerfile
+    #command: java -cp . KafkaSimpleProducer

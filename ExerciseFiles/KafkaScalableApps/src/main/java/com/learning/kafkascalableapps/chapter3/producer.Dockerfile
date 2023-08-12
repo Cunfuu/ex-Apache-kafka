@@ -1,9 +1,9 @@
 FROM openjdk:11-jdk
 
-COPY ./KafkaSimpleConsume.java /app/
+COPY ./KafkaSimpleProducer.java /app/
 
 WORKDIR /app/
 
 RUN javac KafkaSimpleProducer.java
 
-CMD java -cp . KafkaSimpleConsume
+ENTRYPOINT [ "java","KafkaSimpleProducer.java" ]
